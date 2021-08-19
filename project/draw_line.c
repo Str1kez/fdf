@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 19:02:50 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/18 19:08:06 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/19 18:23:26 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static	void	inc_iter(t_point *iter, t_point direction,
 	}
 }
 
-void	draw_line(t_data *img, t_point p1, t_point p2)
+void	draw_line(t_vars *vars, t_point p1, t_point p2)
 {
 	t_point	delta;
 	t_point	direction;
@@ -82,7 +82,7 @@ void	draw_line(t_data *img, t_point p1, t_point p2)
 	iter = p1;
 	while (iter.x != p2.x || iter.y != p2.y)
 	{
-		my_put_pixel(img, iter.x, iter.y, get_gradient(p1, p2, iter, delta));
+		my_put_pixel(vars, iter.x, iter.y, get_gradient(p1, p2, iter, delta));
 		inc_iter(&iter, direction, &error, delta);
 	}
 }

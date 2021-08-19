@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 18:58:44 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/18 21:03:21 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/19 17:44:52 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		get_next_line(int fd, char **line);
+void	str_clean(char **str);
 
 #endif

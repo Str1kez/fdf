@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 20:15:30 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/18 20:15:31 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/19 17:44:17 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@
 // 	return (NULL);
 // }
 
-static void	str_clean(char **str)
+void	str_clean(char **str)
 {
 	if (*str)
 	{

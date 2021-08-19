@@ -1,6 +1,11 @@
 FILES			=	./project/draw_line.c \
-					./project/main.c \
-					./project/my_put_pixel.c
+					./project/fdf.c \
+					./project/my_put_pixel.c \
+					./project/initializators.c \
+					./project/error_handler.c \
+					./project/parse_field.c \
+					./project/queue_methods.c \
+					./project/tools.c
 
 HEADS			=	./includes/fdf.h
 

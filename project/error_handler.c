@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_put_pixel.c                                     :+:      :+:    :+:   */
+/*   error_handler.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/18 19:06:09 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/19 18:23:20 by tnessrou         ###   ########.fr       */
+/*   Created: 2021/08/19 20:36:10 by tnessrou          #+#    #+#             */
+/*   Updated: 2021/08/19 20:41:08 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include <stdlib.h>
+#include <errno.h>
+#include "libft.h"
 
-void	my_put_pixel(t_vars *vars, int x, int y, int color)
+void	raise_error(const char *str)
 {
-	char	*dst;
-
-	dst = vars->addr + (y * vars->line_length + x * vars->bits_per_pixel / 8);
-	*(unsigned int *)dst = color;
+	if (errno)
+		perror(str);
+	else
+		ft_putendl_fd(str, 2);
+	exit(1);
 }
