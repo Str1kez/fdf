@@ -4,8 +4,11 @@ FILES			=	./project/draw_line.c \
 					./project/initializators.c \
 					./project/error_handler.c \
 					./project/parse_field.c \
-					./project/queue_methods.c \
-					./project/tools.c
+					./project/stack_methods.c \
+					./project/tools.c \
+					./project/migrate_to_arr.c \
+					./project/get_point.c \
+					./project/output_to_window.c
 
 HEADS			=	./includes/fdf.h
 

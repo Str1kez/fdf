@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 20:15:30 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/19 17:44:17 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/23 20:34:04 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include "libft.h"
 
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1
+# define BUFFER_SIZE 2048
 #endif
 
 // static char	*ft_strdup(const char *s1)

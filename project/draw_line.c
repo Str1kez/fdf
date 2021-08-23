@@ -6,13 +6,13 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 19:02:50 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/19 18:23:26 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/23 21:09:32 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static double	get_percent(int begin, int end, int temp)
+double	get_percent(int begin, int end, int temp)
 {
 	double	first;
 	double	second;

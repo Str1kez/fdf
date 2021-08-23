@@ -6,15 +6,15 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 20:36:10 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/19 20:41:08 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/23 17:27:59 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
 #include <errno.h>
 #include "libft.h"
 
-void	raise_error(const char *str)
+void	raise_error(char *str)
 {
 	if (errno)
 		perror(str);

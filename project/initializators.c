@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 19:34:31 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/19 21:52:22 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/23 19:35:42 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	init_field(t_field *field)
 {
 	field->horizontal = 0;
 	field->vertical = 0;
-	field->max_z = 0;
-	field->min_z = 0;
+	field->max_z = INT32_MIN;
+	field->min_z = INT32_MAX;
 	field->avg_z = 0;
-	field->point_queue = NULL;
 }
 
 void	init_vars(t_vars *vars)
