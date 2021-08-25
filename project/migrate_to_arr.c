@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 19:13:28 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 22:03:41 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 21:13:34 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	paste_to_arr(t_field *field, t_stack **stack, size_t size)
 		free(origin);
 		origin = pop(stack);
 	}
-	field->avg_z = field->max_z - field->min_z;
+	field->avg_z = (field->max_z + field->min_z) / 2;
 }
 
 void	migrate_to_arr(t_field *field, t_stack **stack)

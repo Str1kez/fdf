@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 19:02:50 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 21:09:32 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 18:59:49 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ double	get_percent(int begin, int end, int temp)
 	double	second;
 
 	first = temp - begin;
-	second = end - temp;
-	if (second == temp)
+	second = end - begin;
+	if (second == 0)
 		return (1.0);
 	return (first / second);
 }
 
 static int	get_shade(int begin, int end, double division)
 {
-	return ((1 - division) * begin + division * end);
+	return ((int)((1 - division) * begin + division * end));
 }
 
 static int	get_gradient(t_point begin, t_point end,

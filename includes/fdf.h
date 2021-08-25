@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 18:52:59 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 22:04:42 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 21:27:38 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "mlx.h"
 # include <stdlib.h>
 # include <unistd.h>
-// # include <stdio.h>
 # include <math.h>
 
 typedef struct s_vars

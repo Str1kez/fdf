@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 21:20:53 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 18:16:48 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 19:29:33 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	ft_atoi_16(const char *s)
 	i = 2;
 	if (s[i - 2] != '0' || s[i - 1] != 'x')
 		return (0);
-	while (ft_isnum_char(s[i], 16) > -1)
-		res = res * 16 + ft_isnum_char(s[i++], 16);
+	while (ft_isnum_char(ft_toupper(s[i]), 16) > -1)
+		res = res * 16 + ft_isnum_char(ft_toupper(s[i++]), 16);
 	return ((int)(res));
 }
 

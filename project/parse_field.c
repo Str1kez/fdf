@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 18:02:51 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 20:48:35 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 20:47:30 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,12 @@ static void	parse_line(char **arr, t_field *field, t_stack **stack)
 	x = 0;
 	while (*arr)
 	{
-		data = ft_split(*arr, ',');
+		data = ft_split(*(arr++), ',');
 		if (!data)
 			raise_error("Error in split");
 		parse_data(data, stack);
 		clean_split(data);
 		x++;
-		arr++;
 	}
 	if (field->vertical == 0)
 		field->horizontal = x;
@@ -74,7 +73,7 @@ int	parse_field(const int fd, t_field *field, t_stack **stack)
 	if (fd < 0)
 		raise_error("Error fd");
 	check = get_next_line(fd, &line);
-	while (check == 1)
+	while (check == 1 || (check == 0 && *line != '\0'))
 	{
 		split_line = ft_split(line, ' ');
 		if (!split_line)

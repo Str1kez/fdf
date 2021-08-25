@@ -6,13 +6,13 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 21:02:24 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 22:04:13 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 19:25:57 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static int get_default_color(t_field *field, int z)
+static int	get_default_color(t_field *field, int z)
 {
 	double	percent;
 
@@ -27,7 +27,7 @@ static int get_default_color(t_field *field, int z)
 t_point	get_point(t_field *field, int x, int y)
 {
 	t_point	point;
-	size_t	pos;
+	int		pos;
 
 	pos = x + (field->horizontal * y);
 	point.x = x;

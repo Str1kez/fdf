@@ -6,7 +6,7 @@
 /*   By: tnessrou <tnessrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 21:15:53 by tnessrou          #+#    #+#             */
-/*   Updated: 2021/08/23 22:03:09 by tnessrou         ###   ########.fr       */
+/*   Updated: 2021/08/25 21:24:47 by tnessrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,11 @@ static void	prepare_scale(t_point *p, t_field *field)
 {
 	double	scale;
 
-	scale = my_min(1920 / field->horizontal / 2, 1080 / field->vertical / 2);
+	scale = my_min(1920 / field->horizontal / 2,
+			 1080 / field->vertical / 2) * 0.75;
 	p->x *= scale;
 	p->y *= scale;
-	p->z *= scale;
+	p->z *= scale * 0.6;
 	p->x -= field->horizontal * scale / 2;
 	p->y -= field->vertical * scale / 2;
 	prepare_iso(p);
